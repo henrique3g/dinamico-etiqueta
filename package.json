@@ -1,0 +1,16 @@
+{
+  "name": "dinamico-etiqueta",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron .",
+    "file": "node ./src/processFile.js"
+  },
+  "dependencies": {
+    "electron": "^9.0.2"
+  },
+  "devDependencies": {
+    "electron-reload": "^1.5.0"
+  }
+}

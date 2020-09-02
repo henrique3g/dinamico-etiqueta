@@ -1,0 +1,118 @@
+body {
+    max-height: 100vh;
+    overflow: hidden;
+}
+input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result {
+    display: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 10px;
+    /* font-stretch: condensed; */
+}
+
+.price {
+    font-size: 30pt;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 0 10%;
+    max-width: 90%;
+    outline: none;
+    border: solid 1px #666;
+}
+.price::placeholder{
+    font-weight: normal;
+    font-size: 20pt;
+}
+
+.product-name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-weight: bold; */
+    display: none;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.list-view {
+    display: none;
+    visibility: visible;
+    flex: 1;
+    flex-direction: column;
+    list-style: none;
+}
+
+.list-view ul {
+    list-style: none;
+    overflow: auto;
+    padding-left: 0;
+}
+
+.list-view ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-view input {
+    outline: none;
+    border-radius: 8px; 
+    font-size: 12pt;
+    padding: 5px;
+    border: solid 1px #666;
+    /* display: inline-block;
+    position: absolute;
+    top: 5;
+    left: auto; */
+}
+
+.selected {
+    background-color: rgb(53, 50, 228);
+    color: #fff;
+}
+@page {
+    /* size: 100cm 480cm; */
+}
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        display: none;
+        visibility: hidden;
+    }
+    .container {
+        display: flex;
+        visibility: visible;
+    }
+    .price {
+        display: none;
+        visibility: hidden;
+    }
+    .product-name {
+        display: flex;
+        visibility: visible;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+    }
+    .result {
+        display: flex;
+        visibility: visible;
+        /* font-size: 38px; */
+    }
+    .list-view {
+        display: none;
+        visibility: hidden;
+    }
+}
